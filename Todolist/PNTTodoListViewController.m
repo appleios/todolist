@@ -7,7 +7,7 @@
 
 @interface PNTTodoListViewController ()
 
-@property (strong, nonatomic) NSArray *todos;
+@property (nonatomic, copy) NSArray *todos;
 
 @end
 
@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.todos = @[ @"todo1", @"todo2" ]
+    self.todos = @[ @"todo1", @"todo2" ];
 }
 
 #pragma mark - UITableViewDataSours
@@ -27,9 +27,6 @@
 
     
 }
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
