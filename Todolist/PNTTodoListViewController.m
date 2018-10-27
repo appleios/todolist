@@ -7,7 +7,7 @@
 
 @interface PNTTodoListViewController ()
 
-@property (strong, nonatomic) NSArray *namesArray;
+@property (strong, nonatomic) NSArray *todos;
 
 @end
 
@@ -16,14 +16,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    self.todos = @[ @"todo1", @"todo2", @"todo2", @"todo2", @"todo2", @"todo2", @"todo2" ];
 }
 
 #pragma mark - UITableViewDataSours
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.namesArray count];
+    return [self.todos count];
 
     
 }
@@ -33,15 +33,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *indentifier = @"Cell";
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"a"];
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
-
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier];
-    }
-
-    cell.textLabel.text = [self.namesArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.todos objectAtIndex:indexPath.row];
 
     return cell;
 }
