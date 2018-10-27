@@ -30,8 +30,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"a"];
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"a"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sel"];
     cell.textLabel.text = self.todos[indexPath.row];
 
     return cell;
