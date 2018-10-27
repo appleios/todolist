@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.todos = @[ @"todo1", @"todo2" ];
+    self.todos = @[ @"todo1", @"todo2" ]
 }
 
 #pragma mark - UITableViewDataSours
