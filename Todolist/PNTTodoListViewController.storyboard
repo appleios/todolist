@@ -33,9 +33,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Todolist" id="dlh-u2-JfG"/>
-                    <connections>
-                        <outlet property="todoesUITable" destination="Z0z-hg-2FX" id="IcA-17-4rF"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90b-d6-e6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

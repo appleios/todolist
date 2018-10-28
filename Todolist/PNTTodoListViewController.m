@@ -7,6 +7,7 @@
 
 @interface PNTTodoListViewController ()
 
+@property (nonatomic, weak) IBOutlet UITableView *TableUI;
 @property (nonatomic, copy) NSArray *todos;
 
 @end

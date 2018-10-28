@@ -6,8 +6,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PNTTodoListViewController : UITableViewController <UITableViewDataSource>
-
-@property (weak, nonatomic) IBOutlet UITableView *todoesUITable;
-
+@interface PNTTodoListViewController : UIViewController
 @end
