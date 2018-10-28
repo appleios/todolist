@@ -5,7 +5,7 @@
 
 #import "PNTTodoListViewController.h"
 
-@interface PNTTodoListViewController ()
+@interface PNTTodoListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSArray *todos;
@@ -30,7 +30,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.textLabel.text = self.todos[indexPath.row];
 
     return cell;
