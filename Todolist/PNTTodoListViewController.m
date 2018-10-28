@@ -31,6 +31,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = self.todos[indexPath.row];
+
     return cell;
 }
 
