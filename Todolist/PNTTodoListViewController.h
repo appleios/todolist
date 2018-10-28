@@ -8,5 +8,6 @@
 
 @interface PNTTodoListViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *todoesUITable;
 
 @end
